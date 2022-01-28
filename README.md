@@ -1,5 +1,6 @@
 <h1 align="center">Habitute eCommerce</h1>
 
+
 [View the live project here.](https://habitute-ecom-site.herokuapp.com/)
 
 Habitute has been created as the fourth milestone project of my education as part of Code Institute's Full Stack Software Development course. Habitute is a virtual eCommerce website. It provides the user with a list of the various products available for purchase online. 

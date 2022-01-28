@@ -1,0 +1,1 @@
+web: gunicorn habitute.wsgi:application

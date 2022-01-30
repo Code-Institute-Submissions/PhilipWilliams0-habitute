@@ -9,17 +9,18 @@ Habitute has been created as the fourth milestone project of my education as par
 
 ## Table of contents
 + [User Experience](#User-Experience-(UX))
-    + []()
-    + []()
-    + []()
-    + []()
-    + []()
-+ []()
-    + []()
-    + []()
-+ []()
-    + []()
-    + [Acknowledgements](#Acknowledgements)
+    + [User Stories](#user_stories)
+    + [Stratery](#stratery)
+    + [Scope](#scope)
+    + [Structure](#structure)
+    + [Skelton](#skelton)
+    + [Design](#design)
++ [Features](#features)   
++ [Technologies Used](#technologies_used)
++ [Testing](#testing)
++ [Deployment](#deployment)
++ [Credits](#credits)
+
 ## User Experience (UX)
 
 Hatitute design ensures that the shopping experience is fast, easy, and as personalised as possible. This is the best way to engage users and boost those all-important checkouts.
@@ -42,7 +43,11 @@ In designing the eCommerce website, I will conceptualise and arrange content and
 
 I'm showing the mockup pages for the structure and how the site will appear on different screen pixels. The wireframes have been created using Balsamiq. 
 
-- Desktop Wireframe - [View](https://github.com/PhilipWilliams0/habitute_ecom/tree/main/readme/wireframes)
+- Desktop Wireframe - [View]()
+
+ERD diagram explains the database design for the Django backend. When you have a user profile, you can save your data there, and the next time you order, it will be preloaded; to the user connected to the website. You can also choose to override the default delivery address by changing it in the checkout process for a much quicker payment. 
+
+- ERD - [View]()
 
 The register link will disappear when logged in, and the login link will change to the account, where the dashboard, profile and logout link will be displayed. There will also be a product management link when you are logged as admin.
 
@@ -73,9 +78,13 @@ Edit profile| &#9989; | &#9989; |
 ### Design
 
 -   #### Colour Scheme
-    -   The two main colours used 
+    - The three main colours used are green, grey and white.
+    - ![#1EBBA3](https://via.placeholder.com/15/1EBBA3/000000?text=+) `#1EBBA3`
+    - ![#505962](https://via.placeholder.com/15/505962/000000?text=+) `#505962`
+    - ![#fff](https://via.placeholder.com/15/fff/000000?text=+) `#fff`
+
 -   #### Typography
-    -   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
+    -   It was designed by Łukasz Dziedzic and includes 10 styles. It goes from thin all the way to ultra-bold. The letters in Lato have some unique curves which can only be seen in larger sizes.
 -   #### Imagery
     -   Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
 
@@ -93,7 +102,10 @@ The site contains the following features:
 
 The following features can be added:
 
-- informs about shipping terms and possible delays
+- Informs about shipping terms and possible delays
+- Contact Form to contact the owner of the website
+- Footer for more information
+
 ## Technologies Used
 
 ### Languages Used
@@ -130,73 +142,37 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
     - [base.html]()
-    - [base.html]()
-    - [base.html]()
-    - [base.html]()
-    - [base.html]()
-    - [base.html]()
-    - [base.html]()
-    - [base.html]()<br>
-    
+    - [bag.html]()
+    - [checkout.html]()
+    - [checkout_success.html]()
+    - [contact.html]()
+    - [index.html]()
+    - [add_products.html]()
+    - [edit.html]()
+    - [product_detail.html]()
+    - [product.html]()
+    - [profile.html]()
+    - [main-nav.html]()
+    - [mobile-top-header.html]()
+    - [footer.html]()
 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
-    - [Results](https://github.com/)
+    - [base.css]()
+    - [profile.css]()
+    - [contact.css]()
+    - [checkout.css]()
+
+[The JavaScript code was tested with 'jshint.com'](https://jshint.com/) 
+    - [stripe_elements.js]()
+    - [countryfield.js]()
+
+-   [PEP8 online](http://pep8online.com/)
+    - [base.css]()
+
 
 ### Testing User Stories from User Experience (UX) Section
 
--   #### First Time Visitor Goals
-
-    1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-
-        1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Hero Image with Text and a "Learn More" Call to action button.
-        2. The main points are made immediately with the hero image
-        3. The user has two options, click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the organisation.
-
-    2. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
-
-        1. The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link describes what the page they will end up at clearly.
-        2. At the bottom of the first 3 pages there is a redirection call to action to ensure the user always has somewhere to go and doesn't feel trapped as they get to the bottom of the page.
-        3. On the Contact Us Page, after a form response is submitted, the page refreshes and the user is brought to the top of the page where the navigation bar is.
-
-    3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their following on social media to determine how trusted and known they are.
-        1. Once the new visitor has read the About Us and What We Do text, they will notice the Why We are Loved So Much section.
-        2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
-        3. At the bottom of the Contact Us page, the user is told underneath the form, that alternatively they can contact the organisation on social media which highlights the links to them.
-
--   #### Returning Visitor Goals
-
-    1. As a Returning Visitor, I want to find the new programming challenges or hackathons.
-
-        1. These are clearly shown in the banner message.
-        2. They will be directed to a page with another hero image and call to action.
-
-    2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-
-        1. The navigation bar clearly highlights the "Contact Us" Page.
-        2. Here they can fill out the form on the page or are told that alternatively they can message the organisation on social media.
-        3. The footer contains links to the organisations Facebook, Twitter and Instagram page as well as the organization's email.
-        4. Whichever link they click, it will be open up in a new tab to ensure the user can easily get back to the website.
-        5. The email button is set up to automatically open up your email app and autofill there email address in the "To" section.
-
-    3. As a Returning Visitor, I want to find the Facebook Group link so that I can join and interact with others in the community.
-        1. The Facebook Page can be found at the footer of every page and will open a new tab for the user and more information can be found on the Facebook page.
-        2. Alternatively, the user can scroll to the bottom of the Home page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
-        3. If the user is on the "Our Favourites" page they will also be greeted with a call to action button to invite the user to the Facebook group. The user is incentivized as they are told there is a weekly favourite product posted in the group.
-
--   #### Frequent User Goals
-
-    1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-
-        1. The user would already be comfortable with the website layout and can easily click the banner message.
-
-    2. As a Frequent User, I want to check to see if there are any new blog posts.
-
-        1. The user would already be comfortable with the website layout and can easily click the blog link
-
-    3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-        1. At the bottom of every page their is a footer which content is consistent throughout all pages.
-        2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
-        3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
+<img src="assets/test-user-stories.png">
 
 ### Further Testing
 
@@ -220,7 +196,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 The project was deployed to GitHub Pages using the following steps...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/PhilipWilliams0/habitute_ecom)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/PhilipWilliams0/habitute)
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
     - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
@@ -324,28 +300,22 @@ python3 manage.py loaddata products
 python3 manage.py runserver
 ```
 If everything went correctly you should see something like this in the terminal:<br>
-<img src=""/> <br>
+
 
 ### Heroku
-To create a live version of the website VSCode was used together with Heroku. This section assumes you have succeeded at running the application in your local environment first, as described above. 
-To deploy the website with Heroku the following steps were made:
+To create a live version of the website VSCode was used together with Heroku. This section assumes you have succeeded at running the application in your local environment first, as described above. To deploy the website with Heroku the following steps were made:
 1. Log in or create an account on [Heroku](https://www.heroku.com) and create a new app by clicking the button.<br>
-<img src=""/> <br>
+
 2. Give the app a unique name in all lowercase letters and set `Choose a region` to the one nearest to you (in this case Europ and 
 postfly_jouw_online_drukkerij is already taken so think of another name), click on create app.<br>
-<img src=""/> <br>
 3. On your app dashboard click `Deploy` and select `GitHub`, connect it to your GitHub respository. Don't click `Enable Automatic Deploys` yet.<br>
-<img src=""/> <br>
+
 4. Click on the `Resources` tab and type `Heroku Postgres` in the `Add-ons` field, select the `Hobby Dev` option.
-<img src=""/> <br>
 5. Click on `Settings` and then `Reveal Config Vars`. <br>
-<img src=""/> <br>
 6. Fill in the values from your `env.py` file in your Heroku confic vars: <br>
 
-| Key | Value |
- --- | ---
-DATABASE_URL | `your_DATABASE_URL`
-SECRET_KEY | `your_SECRET_KEY`
+| Key | Value | --- | ---
+DATABASE_URL | `your_DATABASE_URL`SECRET_KEY | `your_SECRET_KEY`
 STRIPE_PUBLIC_KEY | `your_STRIPE_PUBLIC_KEY`
 STRIPE_SECRET_KEY | `your_STRIPE_SECRET_KEY`
 
@@ -396,16 +366,15 @@ heroku git: remote -a your heroku git url
 git push heroku main
 ```
 You will then see something like this in your terminal:
-<img src=""/> <br>
+
 
 14. If you want you can let the deployment to Heroku be automatically everytime you push to GitHub, on your app dashboard click `Deploy` and click `Enable Automatic Deploys`.
-If you go to the `Activity` tab on your app dashboard you can see that there is a build in progress, the details will look a bit like this:
-<img src=""/> <br>
+If you go to the `Activity` tab on your app dashboard you can see that there is abuild in progress, the details will look a bit like this:
+
 Your app is running on Heroku now.
 
 15. Log in to the admin panel by placing /admin behind your app name, for example for this one: https://habitute.herokuapp.com/admin
 Using the superuser log in details log in.
-
 >!!! If you don't see your email address you may need to attempt to log in first to force allauth to create it !!!
 
 Go to `Email addresses` underneath `ACCOUNTS`, and mark `Primary` and `Verified` for the superuser email address, save the changes you made.
@@ -417,10 +386,10 @@ To follow the next steps make sure you have an Amazon AWS account and that you a
 #### S3 Bucket
 
 1. In the AWS Management Console search for S3, open it and click `Create bucket`<br>
-<img src=""/> <br>
+
 2. Name your bucket to match your Heroku app name and select the region closest to you. Uncheck `Block all public access` and acknowledge that the bucket will be public.
 Click `Create bucket`.
-<img src=""/> <br>
+
 3. Click your newly made bucket and cick the `Properties` tab and turn on `Static website hosting`, just fill in a default value for the index and error document and click save.
 4. Now click on the `Permissions` tab, with the Cross-origin resource sharing (CORS) fill in:
 ```
@@ -442,20 +411,19 @@ Click `Create bucket`.
 Save the changes. <br>
 
 5. Go to `Bucket Policy` and click `Policy generator`, fill it out like this, but with your own arn.<br>
-<img src=""/> <br>
 
 6. Copy the policy that you get and paste it in the `Bucket policy`, in tis case:
 ```
 {
     "Version": "2012-10-17",
-    "Id": "Policy1635688080273",
+    "Id": "Policy1643397465603",
     "Statement": [
         {
-            "Sid": "Stmt1635688076687",
+            "Sid": "Stmt1643397460508",
             "Effect": "Allow",
             "Principal": "*",
             "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::postfly-jouw-online-drukkerij/*"
+            "Resource": "arn:aws:s3:::habitute-project/*"
         }
     ]
 }
@@ -463,25 +431,19 @@ Save the changes. <br>
 Make sure you add the /* with the resource key to allow acces to all resources in this bucket. Click save.<br>
 7. Go to the `Access control list (ACL)` tab and set the list projects permission for everyone under the `Public Access` section.
 
-
 #### IAM
 
 1. In the AWS Management Console search for IAM, open it.
 2. On the IAM dashboard click `User groups` and then `Create group`, name your group so it makes sense to you what it is. Click `Create group`.
 3. On the menu left click `Policies` and then `Create Policy`.
 4. Click on the `Json` tab and click `Import managed policy`, search for `S3` select the `AmazonS3FullAccess` one. Click import.
-<img src="" height="75%"/> <br>
 5. You just want to give permission to your bucket, so make sure you fill it out like this, but with your own arn! 
-<img src=""/> <br>
 Click next untill you reach `ReviewPolicy`
 6. Give it an name and a description and click `Create policy`.
 7. You'll arrive back on the policy page, go to `User groups` in the menu on the left and click on manage-your-group-name.
 8. Click `Attach policies` search for and select the policy you just created.
-<img src=""/> <br>
 9. Click on `Users` in the menu on the left. Then click `Add users` name it after your app, in my case postfly-jouw-online-drukkerij-staticfiles-user, give programmatic access and select next. Add the user to the group you just created. Click through on next and then on create user.
-10. Download the csv file you see there and save it!
-You need the secrect keys in there and once you've done this there is now way to retrieve it!!<br>
-<img src=""/> <br>
+10. Download the csv file you see there and save it!You need the secrect keys in there and once you've done this there is now way to retrieve it!!<br>
 
 #### Connecting AWS to Django
 
@@ -503,12 +465,11 @@ Next time you deploy to Heroku, AWS will retrieve your static files and store th
 4. Click `Add files` and select the images that go with your products or in this case with the size.
 5. Click next and under `Manage public permissions`, and choose `Grant public-read access`.
 6. Then click`Upload`, you will see your files being uploaded.<br>
-<img src=""/> <br>
 
 ### Sending real emails with Gmail
 
 1. Create or use an existing Gmail account.
-2. Connect it to your application to the Gmail account. For more information see for example this [site](https://dev.to/abderrahmanemustapha/how-to-send-email-with-django-and-gmail-in-production-the-right-way-24ab) and read `The Gmail part`.
+2. Connect it to your application to the Gmail account. For more information see forexample this [site](https://dev.to/abderrahmanemustapha/how-to-send-email-with-django-and-gmail-in-production-the-right-way-24ab) and read `The Gmail part`.
 3. Add the values to the Heroku Config Vars:
 
 | Key | Value |
@@ -538,6 +499,7 @@ Everything should be ready to go now.
 
 -   iphone product image - Photo by cottonbro from Pexels
 -   xbox controller image - Photo by simon-trappe from Pexels
+-   unsplash
 
 ### Acknowledgements
 

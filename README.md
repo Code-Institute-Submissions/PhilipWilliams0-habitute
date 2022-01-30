@@ -1,18 +1,32 @@
-<h1 align="center">Habitute eCommerce</h1>
+<h1 align="center">Habitute.</h1>
 
 
-[View the live project here.](https://habitute-ecom-site.herokuapp.com/)
+[View the live project here.](https://habitute-project.herokuapp.com/)
 
 Habitute has been created as the fourth milestone project of my education as part of Code Institute's Full Stack Software Development course. Habitute is a virtual eCommerce website. It provides the user with a list of the various products available for purchase online. 
 
 <h2 align="center"><img src="#"></h2>
 
+## Table of contents
++ [User Experience](#User-Experience-(UX))
+    + []()
+    + []()
+    + []()
+    + []()
+    + []()
++ []()
+    + []()
+    + []()
++ []()
+    + []()
+    + [Acknowledgements](#Acknowledgements)
 ## User Experience (UX)
 
 Hatitute design ensures that the shopping experience is fast, easy, and as personalised as possible. This is the best way to engage users and boost those all-important checkouts.
+
 ### User stories
 
-<img src="readme/user-stories.png">
+<img src="assets/user-stories.png">
 
 ### Strategy
 
@@ -184,6 +198,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   Categories are not appearing at the top of products pages
 -   Stripe payment are unsucessful and keep failing. 
+-   Checkout Success is niot showing delivery and cost charges, works in test but not in deployment.
+-   500 error when completing a payment if not logged in. 
+-   500 error when completing a contact request if not logged in. 
+
 
 ## Deployment
 
@@ -493,7 +511,7 @@ Everything should be ready to go now.
 
 ### Code
 
--   The full-screen hero image code came from this [StackOverflow post](https://stackoverflow.com)
+-   Code Institue boutique-ado project for setup and linking to AWS, supplied the bulk of the tutorials, resources and support for this project. 
 
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
@@ -507,10 +525,14 @@ Everything should be ready to go now.
 
 ### Media
 
--   All Images were created by the developer.
+-   iphone product image - Photo by cottonbro from Pexels
+-   xbox controller image - Photo by simon-trappe from Pexels
 
 ### Acknowledgements
 
 -   My Mentor for continuous helpful feedback.
 
 -   Tutor support at Code Institute for their support.
+
+***
+[back to top](#Table-of-contents)

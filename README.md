@@ -5,7 +5,7 @@
 
 Habitute has been created as the fourth milestone project of my education as part of Code Institute's Full Stack Software Development course. Habitute is a virtual eCommerce website. It provides the user with a list of the various products available for purchase online. 
 
-<h2 align="center"><img src="#"></h2>
+<h2 align="center"><img src="assets/desktop_view.png"></h2>
 
 ## Table of contents
 + [User Experience](#User-Experience-(UX))

@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background: url('/media/banner3.jpg') top/cover no-repeat;
+    background: url('/media/banner-img-1.jpg') top/cover no-repeat;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;

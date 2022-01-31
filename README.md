@@ -79,7 +79,7 @@ Edit profile| &#9989; | &#9989; |
 
 -   #### Colour Scheme
     - The three main colours used are green, grey and white.
-    - ![#1EBBA3](https://via.placeholder.com/15/1EBBA3/000000?text=+) `#1EBBA3`
+    - ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `#000000`
     - ![#505962](https://via.placeholder.com/15/505962/000000?text=+) `#505962`
     - ![#fff](https://via.placeholder.com/15/fff/000000?text=+) `#fff`
 
@@ -87,8 +87,6 @@ Edit profile| &#9989; | &#9989; |
     -   It was designed by Łukasz Dziedzic and includes 10 styles. It goes from thin all the way to ultra-bold. The letters in Lato have some unique curves which can only be seen in larger sizes.
 -   #### Imagery
     -   Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
-
-
 
 ## Features
 ### Existing Features
@@ -183,11 +181,12 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Known Bugs
 
--   Categories are not appearing at the top of products pages
--   Stripe payment are unsucessful and keep failing. 
--   Checkout Success is niot showing delivery and cost charges, works in test but not in deployment.
--   500 error when completing a payment if not logged in. 
+-   Categories are not appearing at the top of products pages - following a refactor of code, this now works on depolyed. 
+-   Stripe payment are unsucessful and keep failing - The failing of payments was from gitpod not deployed. 
+-   Checkout Success is not showing delivery and cost charges, works in test but not in deployment. - Following checkout refactor this is now working in deployed site. 
+-   500 error when completing a payment if not logged in. - Following checkout refactor this has now been resolved. 
 -   500 error when completing a contact request if not logged in. 
+-   index.html some images are not showing the either test or deployed sites. 
 
 
 ## Deployment

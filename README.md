@@ -172,6 +172,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 <img src="assets/test-user-stories.png">
 
+1. View a list of products.
+
+<img src="assets/testing/user-story-1.png">
+
 ### Further Testing
 
 -   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
@@ -187,6 +191,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   500 error when completing a payment if not logged in. - Following checkout refactor this has now been resolved. 
 -   500 error when completing a contact request if not logged in. 
 -   index.html some images are not showing the either test or deployed sites. 
+-   some images are not woking in deployed but no time to recity. 
 
 
 ## Deployment
@@ -496,9 +501,7 @@ Everything should be ready to go now.
 
 ### Media
 
--   iphone product image - Photo by cottonbro from Pexels
--   xbox controller image - Photo by simon-trappe from Pexels
--   unsplash
+-   images supplied by pixels, unsplashed
 
 ### Acknowledgements
 

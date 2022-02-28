@@ -489,6 +489,8 @@ Everything should be ready to go now.
 
 -   Code Institue boutique-ado project for setup and linking to AWS, supplied the bulk of the tutorials, resources and support for this project. 
 
+-   Blog creation was used 
+
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
 -   [MDN Web Docs](https://developer.mozilla.org/) : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found [Here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel#Pattern_validation)

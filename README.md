@@ -1,4 +1,4 @@
-<h1 align="center">Habitute.</h1>
+<h1 align="center">Habitute</h1>
 
 
 [View the live project here.](https://habitute-project.herokuapp.com/)

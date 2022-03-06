@@ -1,15 +1,15 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
 from .forms import PostForm, EditForm
+from django.urls import reverse_lazy
+
 
 # Create your views here.
-# def blog(request):
-# 	return render(request, 'blog/blog.html', {})
-
 class BlogView(ListView):
 	model = Post
 	template_name = 'blog/blog.html'
+	ordering = ['-id']
 
 
 class ArticleDetail(DetailView):
@@ -27,4 +27,9 @@ class UpdateBlogView(UpdateView):
 	model = Post
 	form_class = EditForm
 	template_name = 'blog/edit_blog.html'
-	# fields = ['title', 'title_tag', 'body']
+
+
+class DeleteBlogView(DeleteView):
+	model = Post
+	template_name = 'blog/delete_blog.html'
+	success_url = reverse_lazy('blog')

@@ -37,11 +37,12 @@
     </nav>
     <ul>
         {% for post in object_list %}
-        <li><a href="{% url 'article_detail'  post.pk %}">{{post.title}}</a> - {{post.author.first_name}}
-            {{post.author.last_name}} - <small><a href="{% url 'edit_blog' post.pk %}">Edit Blog</a></small>
+        <li><a href="{% url 'article_detail' post.pk %}">{{post.title}}</a> - {{post.author.first_name}}
+            {{post.author.last_name}} - <small>
+                <a href="{% url 'edit_blog' post.pk %}">Edit Blog</a>
+                <a href="{% url 'delete_blog' post.pk %}">Delete Blog</a>
+            </small>
             <br />{{post.body}}</li>
-
-        <!--{{post.title}}-->
 
         {% endfor %}
     </ul>

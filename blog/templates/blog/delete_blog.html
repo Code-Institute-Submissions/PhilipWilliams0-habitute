@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %}
-{{post.title_tag}}
-{% endblock %}
-
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -19,17 +15,17 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2>{{post.title}}</h2>
+            <h2>Delete Blog</h2>
             <hr>
         </div>
     </div>
-    <small>By: {{ post.author }} - <small><a href="{% url 'edit_blog' post.pk %}">Edit Blog</a>
-            <a href="{% url 'delete_blog' post.pk %}">Delete Blog</a>
-        </small><br />
-        <br /><br />
-        {{ post.body }}
-        <br><br>
-        <a href="{% url 'blog' %}" class="btn btn-dark">Back</a>
+    <h3>Delete: {{ post.title}}</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <strong>Are you sure?!</strong><br />
+        <button class="btn btn-dark">Delete Blog</button>
+    </form>
+    <br /><br />
 </div>
 
 {% endblock %}

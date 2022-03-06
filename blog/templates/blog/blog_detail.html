@@ -23,9 +23,19 @@
             <hr>
         </div>
     </div>
-    <small>By: {{ post.author }} - <a href="{% url 'edit_blog' post.pk %}">Edit Blog</a></small><br /> -
-    {{ post.pub_date }} - {{ post.timestamp }}<br /><br />
+    <small>By: {{ post.author.first_name }}
+        {{ post.author.last_name }} -
+        {{ post.blog_date }}
+
+        {% if user.is_authenticated %}
+        - <a href="{% url 'edit_blog' post.pk %}">Edit Blog</a> -
+        <a href="{% url 'delete_blog' post.pk %}">Delete Blog</a>
+        {% endif %}
+    </small><br />
+    <hr>
+    <br />
     {{ post.body }}
+
     <br><br>
     <a href="{% url 'blog' %}" class="btn btn-dark">Back</a>
 </div>

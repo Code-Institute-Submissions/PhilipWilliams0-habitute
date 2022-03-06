@@ -23,13 +23,11 @@
             <hr>
         </div>
     </div>
-    <small>By: {{ post.author }} - <small><a href="{% url 'edit_blog' post.pk %}">Edit Blog</a>
-            <a href="{% url 'delete_blog' post.pk %}">Delete Blog</a>
-        </small><br />
-        <br /><br />
-        {{ post.body }}
-        <br><br>
-        <a href="{% url 'blog' %}" class="btn btn-dark">Back</a>
+    <small>By: {{ post.author }} - <a href="{% url 'edit_blog' post.pk %}">Edit Blog</a></small><br /> -
+    {{ post.pub_date }} - {{ post.timestamp }}<br /><br />
+    {{ post.body }}
+    <br><br>
+    <a href="{% url 'blog' %}" class="btn btn-dark">Back</a>
 </div>
 
 {% endblock %}

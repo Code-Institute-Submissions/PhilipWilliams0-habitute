@@ -3,7 +3,7 @@ from django.views.generic import (
 	ListView, DetailView, CreateView,
 	UpdateView, DeleteView
 	)
-from .models import Post
+from .models import Post, Category
 from .forms import PostForm, EditForm
 from django.urls import reverse_lazy
 
@@ -25,6 +25,17 @@ class AddBlogView(CreateView):
 	model = Post
 	form_class = PostForm
 	template_name = 'blog/add_blog.html'
+
+
+class AddCategoryView(CreateView):
+	model = Category
+	fields = '__all__'
+	template_name = 'blog/add_category.html'
+
+
+def CategoryView(request, cate):
+	category_blogs = Post.objects.filter(category=cate)
+	return render(request, 'categories.html', {'cate':cate.title(), 'category_blogs':category_blogs})
 
 
 class UpdateBlogView(UpdateView):

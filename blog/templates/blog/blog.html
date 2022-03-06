@@ -38,8 +38,7 @@
     <ul>
         {% for post in object_list %}
         <li><a href="{% url 'article_detail'  post.pk %}">{{post.title}}</a> - {{post.author.first_name}}
-            {{post.author.last_name}} - <a href="">Edit Post</a> -
-            <a href="">Delete Post</a>
+            {{post.author.last_name}} - <small><a href="{% url 'edit_blog' post.pk %}">Edit Blog</a></small>
             <br />{{post.body}}</li>
 
         <!--{{post.title}}-->

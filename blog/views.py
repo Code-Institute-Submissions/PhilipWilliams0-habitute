@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 from .models import Post
 
 # Create your views here.
@@ -14,3 +14,10 @@ class BlogView(ListView):
 class ArticleDetail(DetailView):
 	model = Post
 	template_name = 'blog/article_details.html'
+
+
+class AddBlogView(CreateView):
+	model = Post
+	template_name = 'blog/add_blog.html'
+	fields = '__all__'
+	#fields = ('title', 'body')

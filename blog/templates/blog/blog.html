@@ -30,14 +30,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="{% url 'add_blog' %}">Add Blog</a>
                 </li>
             </ul>
         </div>
     </nav>
     <ul>
         {% for post in object_list %}
-        <li><a href="{% url 'article-detail'  post.pk %}">{{post.title}}</a> - {{post.author.first_name}}
+        <li><a href="{% url 'article_detail'  post.pk %}">{{post.title}}</a> - {{post.author.first_name}}
             {{post.author.last_name}} - <a href="">Edit Post</a> -
             <a href="">Delete Post</a>
             <br />{{post.body}}</li>

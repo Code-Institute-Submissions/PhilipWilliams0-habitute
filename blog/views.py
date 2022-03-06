@@ -13,8 +13,12 @@ class BlogView(ListView):
 	model = Post
 	template_name = 'blog/blog.html'
 	ordering = ['-blog_date']
-	success_message = 'List successfully saved!!!!'
-
+	
+	def get_context_data(self, *args, **kwargs):
+		cate_menu = Category.objects.all()
+		context = super(BlogView, self).get_context_data(*args, **kwargs)
+		context["cate_menu"] = cate_menu
+		return context
 
 class BlogDetail(DetailView):
 	model = Post
@@ -33,9 +37,14 @@ class AddCategoryView(CreateView):
 	template_name = 'blog/add_category.html'
 
 
+def CategoryListView(request):
+	cate_menu_list = Category.objects.all()
+	return render(request, 'category_list.html', {'cate_menu_list':cate_menu_list})
+
+
 def CategoryView(request, cate):
-	category_blogs = Post.objects.filter(category=cate)
-	return render(request, 'categories.html', {'cate':cate.title(), 'category_blogs':category_blogs})
+	category_blogs = Post.objects.filter(category=cate.replace('-', ' '))
+	return render(request, 'categories.html', {'cate':cate.title().replace('-', ' '), 'category_blogs':category_blogs})
 
 
 class UpdateBlogView(UpdateView):

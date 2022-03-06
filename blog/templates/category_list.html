@@ -19,24 +19,13 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2>{{post.title}}</h2>
+            <h2>Blog Categories</h2>
             <hr>
         </div>
     </div>
-    <small>By: {{ post.author.first_name }}
-        {{ post.author.last_name }} -
-        {{ post.blog_date }}
-
-        {% if user.is_authenticated %}
-        {% if user.id == post.author.id %}
-        - <a href="{% url 'edit_blog' post.pk %}">Edit Blog</a> -
-        <a href="{% url 'delete_blog' post.pk %}">Delete Blog</a>
-        {% endif %}
-        {% endif %}
-    </small><br />
-    <hr>
-    <br />
-    {{ post.body|safe }}
+    {% for item in cate_menu_list %}
+    <h4><a class="dropdown-item" href="{% url 'category' item|slugify %}">{{ item }}</a></h4>
+    {% endfor %}
 
     <br><br>
     <a href="{% url 'blog' %}" class="btn btn-dark">Back</a>

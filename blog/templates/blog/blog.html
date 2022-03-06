@@ -29,6 +29,27 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+                <!-- category menu code -->
+                {% if cate_menu %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        {% for item in cate_menu %}
+                        <a class="dropdown-item" href="{% url 'category' item|slugify %}">{{ item }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
+                {% else %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'category-list' %}">Categories</a>
+                </li>
+
+                {% endif %}
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'add_blog' %}">Add blog</a>
@@ -55,13 +76,15 @@
         {% for post in object_list %}
         <li><a href="{% url 'blog_detail'  post.pk %}">
                 {{post.title}}</a>
-            <a href="{% url 'category' post.category %}">{{ post.category }}</a>
+            <a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a>
             {{ post.author.first_name }}
             {{ post.author.last_name }} - {{ post.blog_date }}
             <small>
                 {% if user.is_authenticated %}
+                {% if user.id == post.author.id %}
                 - <a href="{% url 'edit_blog' post.pk %}">Edit Blog</a> -
                 <a href="{% url 'delete_blog' post.pk %}">Delete Blog</a>
+                {% endif %}
                 {% endif %}
             </small>
             <br />{{ post.body|slice:":200"|safe }}</li>

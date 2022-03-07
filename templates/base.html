@@ -73,11 +73,11 @@
                     <!-- blog -->
                     {% if request.user.is_authenticated %}
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" aria-haspopup="true"
-                            aria-expanded="false">
+                        <a class="text-black nav-link" href="{% url 'news_idx' %}" id="user-options"
+                            aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-solid fa-comment-dots fa-lg"></i></div>
-                                <p class="my-0">Blog</p>
+                                <div><i class="fas fa-solid fa-newspaper fa-lg"></i></div>
+                                <p class="my-0">News</p>
                             </div>
                         </a>
                     </li>

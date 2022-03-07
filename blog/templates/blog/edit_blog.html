@@ -30,6 +30,7 @@ Edit Blog
         {{ form.media }}
         {{ form.as_p }}
         <button class="btn btn-dark">Update Blog</button>
+        <a href="{% url 'blog' %}" class="btn btn-dark">Back</a>
     </form>
 </div>
 {% else %}

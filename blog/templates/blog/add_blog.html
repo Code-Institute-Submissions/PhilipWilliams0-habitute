@@ -29,7 +29,9 @@ Create a New Blog
         {{ form.media }}
         {{ form.as_p }}
         <button class="btn btn-dark">Post</button>
+        <a href="{% url 'blog' %}" class="btn btn-dark">Back</a>
     </form>
+
 </div>
 {% else %}
 <div class="overlay"></div>

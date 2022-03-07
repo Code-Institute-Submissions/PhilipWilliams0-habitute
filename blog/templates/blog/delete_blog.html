@@ -25,6 +25,7 @@
         {% csrf_token %}
         <strong>Are you sure?!</strong><br />
         <button class="btn btn-dark">Delete Blog</button>
+        <a href="{% url 'blog' %}" class="btn btn-dark">Back</a>
     </form>
     <br /><br />
 </div>

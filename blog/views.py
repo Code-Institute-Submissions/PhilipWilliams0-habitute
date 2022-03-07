@@ -39,12 +39,12 @@ class AddCategoryView(CreateView):
 
 def CategoryListView(request):
 	cate_menu_list = Category.objects.all()
-	return render(request, 'category_list.html', {'cate_menu_list':cate_menu_list})
+	return render(request, 'blog/category_list.html', {'cate_menu_list':cate_menu_list})
 
 
 def CategoryView(request, cate):
 	category_blogs = Post.objects.filter(category=cate.replace('-', ' '))
-	return render(request, 'categories.html', {'cate':cate.title().replace('-', ' '), 'category_blogs':category_blogs})
+	return render(request, 'blog/categories.html', {'cate':cate.title().replace('-', ' '), 'category_blogs':category_blogs})
 
 
 class UpdateBlogView(UpdateView):

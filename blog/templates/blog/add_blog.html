@@ -53,4 +53,8 @@ Create a New Blog
 {% endblock %}
 
 {% block postloadjs %}
+<script>
+    var name = "{{ user.id }}";
+    document.getElementById("admin").value = name;
+</script>
 {% endblock %}

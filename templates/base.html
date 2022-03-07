@@ -69,6 +69,23 @@
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+
+                    <!-- blog -->
+                    {% if request.user.is_authenticated %}
+                    <li class="list-inline-item dropdown">
+                        <a class="text-black nav-link" href="{% url 'blog' %}" id="user-options" aria-haspopup="true"
+                            aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-solid fa-comment-dots fa-lg"></i></div>
+                                <p class="my-0">Blog</p>
+                            </div>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li></li>
+                    {% endif %}
+                    <!-- end blog -->
+
                     <!-- my account -->
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
@@ -84,7 +101,6 @@
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                             {% endif %}
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Blog</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>

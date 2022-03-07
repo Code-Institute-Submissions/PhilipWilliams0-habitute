@@ -294,9 +294,6 @@ python3 manage.py createsuperuser
 6. Now we need to add the required data into the database in the following order by using the following commands:
 ```
 python3 manage.py loaddata categories
-python3 manage.py loaddata printingmethod
-python3 manage.py loaddata size
-python3 manage.py loaddata producttag
 python3 manage.py loaddata products
 ```
 7. At this point you can start your server with the following command:
@@ -345,9 +342,6 @@ python3 manage.py createsuperuser
 10. Now we need to add the required data into the database in the following order by using the following commands:
 ```
 python3 manage.py loaddata categories
-python3 manage.py loaddata printingmethod
-python3 manage.py loaddata size
-python3 manage.py loaddata producttag
 python3 manage.py loaddata products
 ```
 11. Install Heroku in the terminal, if you don't have that 

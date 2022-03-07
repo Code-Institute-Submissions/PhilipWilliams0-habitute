@@ -19,25 +19,25 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Blogs</h2>
+            <h2 class="logo-font">{{ blog.title }}</h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
-    <ul>
-        {% for blog in object_list %}
-        <li>
-            <a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a>
-            - {{ blog.author }}<br>
-            {{ blog.body }}
-        </li>
-        {% endfor %}
-    </ul>
+    <small>By: {{ blog.author.first_name }} {{ blog.author.last_name }}</small>
+    <hr>
+    {{ blog.body }}
+    <br>
+
+    <button class=" btn btn-dark">
+        <a href="{% url 'blog' %}">Back</a>
+    </button>
 </div>
+
 
 
 
 
 {% endblock %}
 
-{% block postloadjs %}
+{% block blogloadjs %}
 {% endblock %}

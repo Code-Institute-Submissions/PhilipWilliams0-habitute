@@ -10,12 +10,12 @@
 {% endblock %}
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static '#' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'newsapp/newsapp.css' %}">
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">News Board</h2>
+            <h2 class="logo-font">Latest Articles in Fashion</h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
@@ -24,16 +24,28 @@
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            {% for title, description, image, url in news %}
+            {% for title, description, image, url, published_at in news %}
             <div class="col">
                 <div class="card shadow-sm">
-                    <img src="{{ image }}" alt="Fashion news" />
+                    {% if image %}
+                    <a href="{{ url }}" target="_blank">
+                        <img src="{{ image }}" alt="news article" width="100%" height="225">
+                    </a>
+                    {% else %}
+                    <a href="{{ url }}" target="_blank">
+                        <img width="100%" height="225" src="{{ MEDIA_URL }}noimage.png" alt="news artilce">
+                    </a>
+                    {% endif %}
                     <div class="card-body">
-                        <a href="{{ url }}" target="_blank">
-                            <h4 class="card-text">{{ title }}</h4>
-                        </a>
-                        <p class="card-text">{{ description }}</p>
-                        <div class="d-flex justify-content-between align-items-center"></div>
+                        <h5 class="card-text text-black">{{ title|slice:"50" }}</h5>
+                        <p class="card-text">{{ description|slice:"100" }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="{{ url }}" target="_blank" class="btn btn-sm btn-outline-secondary">Read
+                                    More</a>
+                            </div>
+                            <small class="text-muted">{{ published_at|slice:"10" }}</small>
+                        </div>
                     </div>
                 </div>
             </div>

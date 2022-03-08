@@ -4,12 +4,15 @@ from dotenv import load_dotenv
 import requests
 
 load_dotenv()
-# environment variables 
+# environment variables
 MEDIASTACK_KEY = os.environ.get("MEDIASTACK_KEY")
+
 
 # Create your views here.
 def news_idx(request):
-    r = requests.get(f'http://api.mediastack.com/v1/news?access_key={MEDIASTACK_KEY}&keywords=fashion&countries=gb')
+    r = requests.get(
+        f'http://api.mediastack.com/v1/news?access_key={MEDIASTACK_KEY}&\
+        keywords=fashion&countries=gb')
     res = r.json()
     data = res['data']
     title = []

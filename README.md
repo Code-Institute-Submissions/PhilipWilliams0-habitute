@@ -237,14 +237,14 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 ```
 $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
+> Cloning into 'habitute'...
+> remote: Enumerating objects: 1588, done.
+> remote: Counting objects: 100% (1588/1588), done.
+> remote: Compressing objects: 100% (982/982), done.
+> remote: Total 1588 (delta 736), reused 1267 (delta 418), pack-reused 0
+> Receiving objects: 100% (1588/1588), 88.32 MiB | 4.84 MiB/s, done.
+> Resolving deltas: 100% (736/736), done.
 ```
-
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 ### Virtual Environment
 
@@ -272,12 +272,20 @@ pip3 install -r requirements.txt
 import os
 
 #Django
-os.environ.setdefault( 'DEVELOPMENT', 'True')
-os.environ.setdefault('SECRET_KEY', 'your_value')
+os.environ["SECRET_KEY"] = ""
+os.environ["DEVELOPMENT"] = 
 
 #Stripe
-os.environ.setdefault('STRIPE_PUBLIC_KEY', 'your_value')
-os.environ.setdefault('STRIPE_SECRET_KEY', 'your_value')
+os.environ["STRIPE_PUBLIC_KEY"] = ""
+os.environ["STRIPE_SECRET_KEY"] = ""
+os.environ["STRIPE_WH_SECRET"] = ""
+
+#gmail
+os.environ["DEFAULT_FROM_EMAIL"] = ""
+
+# mediastack
+os.environ["MEDIASTACK_KEY"] = ""
+ 
 ```
 Replace `your_value` with the values from your own created accounts for stripe and a [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/):
 - [STRIPE_PUBLIC_KEY](https://dashboard.stripe.com/test/apikeys)
@@ -319,10 +327,13 @@ postfly_jouw_online_drukkerij is already taken so think of another name), click 
 5. Click on `Settings` and then `Reveal Config Vars`. <br>
 6. Fill in the values from your `env.py` file in your Heroku confic vars: <br>
 
-| Key | Value | --- | ---
-DATABASE_URL | `your_DATABASE_URL`SECRET_KEY | `your_SECRET_KEY`
+| Key | Value 
+| --- | ---
+DATABASE_URL | `your_DATABASE_URL`
+SECRET_KEY | `your_SECRET_KEY`
 STRIPE_PUBLIC_KEY | `your_STRIPE_PUBLIC_KEY`
 STRIPE_SECRET_KEY | `your_STRIPE_SECRET_KEY`
+STRIPE_WH_SECRET | `your_STRIPE_WH_SECRET`
 
 The DATABASE_URL link which can be found in Heroku's Config Vars.<br>
 7. Since the database on Heroku is created you need to adjust your `env.py` file, add:

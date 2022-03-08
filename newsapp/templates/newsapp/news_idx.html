@@ -25,15 +25,15 @@
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {% for title, description, image, url, published_at in news %}
-            <div class="col">
+            <div class="col py-5">
                 <div class="card shadow-sm">
                     {% if image %}
                     <a href="{{ url }}" target="_blank">
-                        <img src="{{ image }}" alt="news article" width="100%" height="225">
+                        <img src="{{ image }}" class="img-fluid max-width: 100%;" alt="news article">
                     </a>
                     {% else %}
                     <a href="{{ url }}" target="_blank">
-                        <img width="100%" height="225" src="{{ MEDIA_URL }}noimage.png" alt="news artilce">
+                        <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid max-width: 100%;" alt="news article">
                     </a>
                     {% endif %}
                     <div class="card-body">

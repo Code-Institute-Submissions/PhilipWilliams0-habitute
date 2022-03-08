@@ -64,6 +64,7 @@ Dashboard| &#9989; | &#10060; |
 Profile| &#9989; | &#10060; |
 Log out| &#9989; | &#10060; |
 Shopping bag | &#9989; | &#9989; |
+Fashion news | &#9989; | &#10060; |
 
 Rights change when logged as admin:
 
@@ -73,6 +74,7 @@ Add products | &#10060; | &#9989; |
 Update products | &#10060; | &#9989; |
 Delete products | &#10060; | &#9989; |
 See other user orders | &#10060; | &#9989; |
+Fashion news | &#10060; | &#9989; |
 Edit profile| &#9989; | &#9989; |
 
 ### Design
@@ -93,7 +95,7 @@ Edit profile| &#9989; | &#9989; |
 
 The site contains the following features: 
 -   Responsive on all device sizes
-
+-   Adding a news section for fashion trends
 -   Interactive elements
 
 ### Features for the future
@@ -153,19 +155,21 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
     - [main-nav.html]()
     - [mobile-top-header.html]()
     - [footer.html]()
+    - [news_idx.html]()
 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
     - [base.css]()
     - [profile.css]()
     - [contact.css]()
     - [checkout.css]()
+    - [newsapp.css]()
 
 [The JavaScript code was tested with 'jshint.com'](https://jshint.com/) 
     - [stripe_elements.js]()
     - [countryfield.js]()
 
 -   [PEP8 online](http://pep8online.com/)
-    - [base.css]()
+    - []()
 
 
 ### Testing User Stories from User Experience (UX) Section
@@ -191,7 +195,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   500 error when completing a payment if not logged in. - Following checkout refactor this has now been resolved. 
 -   500 error when completing a contact request if not logged in. 
 -   index.html some images are not showing the either test or deployed sites. 
--   some images are not woking in deployed but no time to recity. 
+-   some images are not woking in deployed but no time to recity. - This has been resolved by changing the path via media. 
 
 
 ## Deployment

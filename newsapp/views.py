@@ -1,10 +1,15 @@
+import os
 from django.shortcuts import render
+from dotenv import load_dotenv
 import requests
 
+load_dotenv()
+# environment variables 
+MEDIASTACK_KEY = os.environ.get("MEDIASTACK_KEY")
 
 # Create your views here.
 def news_idx(request):
-    r = requests.get('http://api.mediastack.com/v1/news?access_key=6e62d2407ee16a925395dba5c53def18&keywords=fashion&countries=gb')
+    r = requests.get(f'http://api.mediastack.com/v1/news?access_key={MEDIASTACK_KEY}&keywords=fashion&countries=gb')
     res = r.json()
     data = res['data']
     title = []
